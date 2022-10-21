@@ -2,8 +2,14 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { ENV_TYPE } from "@bcp/models/env.model";
+import { defaults } from "./defaults";
+
 export const environment = {
-  production: false
+	...defaults,
+	production: false,
+	baseUrl: 'http://localhost:3000',
+	type: ENV_TYPE.DEV,
 };
 
 /*

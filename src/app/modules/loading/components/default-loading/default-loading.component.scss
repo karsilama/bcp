@@ -1,0 +1,11 @@
+@import './mixins';
+
+.bcp-default-loading{
+    @include prefix(display, flex);
+    height: 100vh;
+    
+    img {
+        width: 200px;
+        margin: 0 auto;
+    }
+}

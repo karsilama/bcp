@@ -1,0 +1,10 @@
+<bcp-header title="Agencias"
+    [allSelected]="areAllSelected"
+    (onFilter)="handleBcpHeaderFilter($event)"
+    (onSelectAll)="handleBcpHeaderSelect($event)"
+>
+</bcp-header>
+<bcp-agencies-list [agencies]="agencies"></bcp-agencies-list> 
+<div class="w-100 d-flex flex-row-reverse p-4 position-fixed right-0 bottom-0">
+    <bcp-more-btn (onClick)="handleBcpMoreBtn()"></bcp-more-btn>
+</div>

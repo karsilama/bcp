@@ -1,0 +1,37 @@
+<ng-container *ngIf="agencies.length">
+    <div *ngFor="let agency of agencies" 
+    (click)="handleOnClickRow(agency)"
+    class="bcp-list-row d-flex flex-column w-100 pt-2 pb-2">
+        <div class="w-100 d-flex justify-content-center align-items-center ">
+            <div class="image ps-4 pe-2">
+                <img 
+                [src]="agency.image" 
+                alt="Imagen institucional" />
+            </div>
+            <div class="body flex-grow-1 ps-2 pe-2">
+                <p class="fs-5 fw-bold">{{agency.agencia}}</p>  
+                <p class="fs-6 fw-bold">{{agency.provincia}}</p>  
+                <a href="javascript:void(0)" 
+                    class="d-flex align-items-start fs-6 gray-darker address" 
+                    (click)="handleDirection(agency); $event.stopPropagation()">
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+                    <small>{{agency.direccion}}</small>
+                </a>
+            </div>
+            <div class="right-icon ps-2 pe-4">
+                <i *ngIf="agency.favorite; else unfavorite" 
+                class="bi bi-star-fill"
+                (click)="handleFavoriteClick(agency); $event.stopPropagation()"></i>
+                <ng-template #unfavorite>
+                    <i class="bi bi-star" 
+                    (click)="handleFavoriteClick(agency); $event.stopPropagation()"></i>
+                </ng-template>
+            </div>
+        </div>     
+    </div>
+    <bcp-map 
+    *ngIf="apiLoaded && options" 
+    [options]="options"
+    (onClose)="options = null">
+</bcp-map>  
+</ng-container>

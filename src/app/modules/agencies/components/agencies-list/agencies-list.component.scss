@@ -1,0 +1,49 @@
+@import 'styles.scss';
+
+.bcp-agencies-list {
+    display: block;
+
+    .bcp-list-row {
+        display: block;
+        border-bottom: solid 1px $grey-lighten;
+
+        &:first-child {
+            border-top: none;
+        }
+
+        [class*="-icon"] i {
+            color: grey;
+        }
+
+        [class*="fs-"] {
+            margin-bottom: 0;
+        }
+
+        .image img {
+            width: 90px;
+        }
+
+        .right-icon {
+            font-size: 25px;
+        }
+    }
+
+    bcp-map {
+        position: fixed;
+        z-index: 9999;
+        width: 100vw;
+        height: 100vh;
+        background-color: $white;
+        left: 0;
+        top: 0;
+    }
+}
+
+.bcp-desktop {
+
+    .unfavorite,
+    .favorite,
+    .address {
+        cursor: pointer;
+    }
+}

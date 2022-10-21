@@ -1,0 +1,8 @@
+<button 
+(click)="handleClick()"
+[disabled]="disabled" 
+type="button" 
+class="btn {{className}}">
+    <i *ngIf="iconName?.length" class="bi {{iconName}}"></i>
+    <span *ngIf="actionText?.length">{{actionText}}</span>
+</button>

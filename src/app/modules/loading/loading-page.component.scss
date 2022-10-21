@@ -1,0 +1,11 @@
+@import 'styles.scss';
+
+.bcp-loading-page{
+    display: block;
+
+    .progress-container{
+        transform: translateX(-10px);
+        width: calc(100vw + 20px);
+        margin: 0;
+    } 
+}

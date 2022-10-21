@@ -1,0 +1,34 @@
+@import 'styles';
+
+.bcp-button {
+    display: block;
+
+    .btn-primary {
+        background-color: $cyan;
+        border-color: $cyan !important;
+        @include prefix(box-shadow, 3px 3px 0px 0px rgba(176, 176, 176, 0.75));
+        @include prefix(border-radius, 2px);
+    }
+
+    .btn-secondary {
+        color: $white;
+        background-color: $orange;
+        border-color: $orange !important;
+        height: 50px;
+        width: 50px;
+        @include prefix(box-shadow, 3px 3px 0px 0px rgba(176, 176, 176, 0.75));
+        @include prefix(border-radius, 50%);
+    }
+
+    .round {
+        width: 60px;
+        height: 60px;
+        padding: 0 10px;
+        @include prefix(border-radius, 50%);
+
+        i {
+            color: $black;
+            font-size: 35px;
+        }
+    }
+}

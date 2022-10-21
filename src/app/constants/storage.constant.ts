@@ -1,0 +1,5 @@
+export const STORAGE_PREFIX = 'BCP';
+
+export const STORAGE_KEYS = {
+	AGENCIES: `${STORAGE_PREFIX}_AGENCIES`
+}

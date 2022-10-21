@@ -1,0 +1,31 @@
+<bcp-header title="Detalle de agencia" [navBar]="false"></bcp-header>
+<form [formGroup]="form">
+    <div class="form-floating mb-3">
+        <input type="text" formControlName="agencia" class="form-control" id="agencia" placeholder="Nombre de Agencia">
+        <label for="agencia">Nombre de Agencia</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" formControlName="direccion" class="form-control" id="direccion" placeholder="Dirección">
+        <label for="direccion">Dirección</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" formControlName="distrito" class="form-control" id="distrito" placeholder="Distrito">
+        <label for="direccion">Distrito</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" formControlName="lat" class="form-control" id="lat" placeholder="Latitud">
+        <label for="lat">Latitud</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input type="text" formControlName="lng" class="form-control" id="lng" placeholder="Longitud">
+        <label for="lng">Longitud</label>
+    </div>
+   <div class="d-flex justify-content-center">
+    <bcp-button
+    [disabled]="form.pristine" 
+    className="btn-primary ps-4 pe-4"
+    actionText="Actualizar"
+    (onClick)="handleBcpButtonClick()">
+    </bcp-button>
+   </div>
+</form>

@@ -1,0 +1,10 @@
+@import 'styles';
+
+.bcp-map {
+    .btn-close {
+        position: fixed;
+        z-index: 99999;
+        top: 20px;
+        right: 60px;
+    }
+}

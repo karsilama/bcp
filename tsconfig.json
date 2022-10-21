@@ -2,8 +2,9 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
+    "strictPropertyInitialization" : false,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -18,15 +19,22 @@
     "importHelpers": true,
     "target": "es2020",
     "module": "es2020",
+    "resolveJsonModule" : true,
+    "noImplicitAny" : false,
+    "strictNullChecks" : false,
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths" : {
+      "@bcp/*" : ["src/app/*"],
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+    "strictTemplates": true,
+    "preserveWhitespaces": true
+  },
 }

@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import './node_modules/bootstrap/scss/bootstrap';
+@import './node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+@import './app/sass/styles.scss';
+
+input,
+input:focus,
+input:active {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.map-container {
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.toast {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0.5em;
+    z-index: 1200;
+    background: $white;
+}

@@ -1,0 +1,25 @@
+.rotate {
+    @include prefix(animation, spin 1ms linear infinite);
+}
+
+.dim-background {
+    @include prefix(animation, dim-page 1s 1s linear forwards);
+}
+
+@keyframes spin {
+    0% {
+        @include prefix(transform, rotate(0));
+    }
+    100% {
+        @include prefix(transform, rotate(360deg));
+    }
+} 
+
+@keyframes dim-page {
+    0% {
+        background: $white;
+    }
+    100% {
+        background-color: $white-darker;
+    }
+} 

@@ -1,0 +1,15 @@
+@import 'styles';
+
+.bcp-agency-detail-page {
+    display: block;
+
+    label {
+        color: $cyan;
+    }
+
+    input {
+        border: none;
+        border-bottom: solid 3px $cyan;
+        @include prefix(border-radius, 0);
+    }
+}

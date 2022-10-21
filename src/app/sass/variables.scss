@@ -1,0 +1,15 @@
+// GLOBALS
+$blue : #00329a;
+$blue-lighter : #447bf6;
+$cyan : #4ea2f6;
+$orange : #ef7f31;
+$pink : #d73a66;
+$grey : #b3b3b3;
+$grey-darken : #808080;
+$grey-lighten : lighten($grey, 20%);
+$black : #000;
+$white : #fff;
+$white-darker : #bbb;
+
+// APP COMPONENTS
+$box-shadow-inset-list-row: inset 0 1px 2px rgba($black, .1);

@@ -1,0 +1,33 @@
+<div class="h-100 d-flex justify-content-center">
+
+    <div class="d-flex flex-grow-1 h-100 d-flex justify-content-center align-items-end ps-4 fs-4" 
+        [class.pb-3]="!filter">
+       <span *ngIf="!filter; else showSearchInput">{{ title }}</span> 
+       <ng-template #showSearchInput>
+            <form [formGroup]="form" class="pb-2 w-100">
+                <input type="text" formControlName="search" class="form-control" placeholder="Filtrar">
+            </form>
+       </ng-template>
+    </div>
+
+    <div *ngIf="navBar" 
+        class="d-flex align-items-center justify-content-end pe-4">
+        
+        <i (click)="handleFilterClick()" 
+        *ngIf="!filter; else closefilter" 
+        class="bi bi-search filter"></i>
+        
+        <ng-template #closefilter>
+            <i (click)="handleFilterClick()" class="bi bi-plus-lg"></i>
+        </ng-template>
+        
+        <i (click)="handleSelectFavoriteClick()" 
+        *ngIf="allSelected; else unselected"
+        class="bi bi-check-circle-fill search"></i>
+        
+        <ng-template #unselected>
+            <i (click)="handleSelectFavoriteClick()" class="bi bi-check-circle search"></i>   
+        </ng-template>
+        
+    </div>
+</div>
